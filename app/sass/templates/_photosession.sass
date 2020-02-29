@@ -1,0 +1,77 @@
+.photosession
+  padding-top: 7rem
+
+  &__inner
+
+    &-row
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 3.9rem
+
+    &-titel
+      max-width: 46rem
+      margin-bottom: 1.8rem      
+
+      font-size: 4rem
+      line-height: 4.9rem
+      font-weight: 500
+
+    &-text
+      max-width: 54.9rem
+      margin-top: 0
+      margin-bottom: 1.8rem
+
+      font-size: 1.8rem
+      line-height: 2.6rem 
+
+    &-item
+      position: relative
+      padding-left: 4.3rem
+
+      font-size: 1.4rem
+      line-height: 2rem
+      font-weight: 500
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: -0.8rem
+        background:  no-repeat center/cover
+
+      &:first-child
+        margin-bottom: 3.3rem
+        padding-left: 5.1rem
+        &::before
+          width: 4rem
+          height: 3.7rem
+          
+          background-image: url('../images/svg/icon-clock.svg') 
+
+      &:nth-child(2)
+        margin-bottom: 2.6rem
+        &::before
+          width: 3.5rem
+          height: 2.8rem
+          
+          background-image: url('../images/svg/icon-camera.svg') 
+
+      &:nth-child(3)
+        margin-bottom: 2.5rem
+        &::before
+          width: 3.3rem
+          height: 3.3rem
+          
+          background-image: url('../images/svg/icon-location.svg')
+
+      &:last-child
+        &::before
+          width: 3.1rem
+          height: 3.1rem
+
+          
+          background-image: url('../images/svg/icon-message.svg')
+          
+
+
+
