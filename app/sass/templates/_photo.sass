@@ -8,10 +8,7 @@
 
   &__inner
     border-bottom: 0.05rem solid $border
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
+    
 
     &-list
       display: flex
@@ -19,10 +16,18 @@
       flex-wrap: wrap
       margin-bottom: 3.7rem
 
+    &-content
+      display: none
+
     &-link
       position: relative     
+      margin: 0 auto
       margin-bottom: 3.5rem  
+      max-width: 19.5rem
+      
+
       padding: 0 2.1rem
+      cursor: pointer
       
       color: $link
       &::before,
@@ -31,10 +36,20 @@
         position: absolute
         font-family: 'icomoon'
         font-size: 1.6rem
+        
 
         color: $border
+        transition: all 0.5s
 
       &::before
         left: 0
       &::after
         right: 0
+
+      &.active
+        &::before,
+        &::after
+          transform: rotate(180deg)
+
+
+  

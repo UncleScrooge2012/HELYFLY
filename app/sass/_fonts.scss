@@ -25,11 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-heart:before {
   content: "\f004";
 }
 .icon-check:before {
   content: "\f00c";
+}
+.icon-calendar:before {
+  content: "\f073";
 }
 .icon-angle-left:before {
   content: "\f104";

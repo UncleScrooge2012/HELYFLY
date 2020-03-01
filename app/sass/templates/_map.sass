@@ -1,0 +1,90 @@
+.map
+  margin-top: 8.2rem
+
+  &__inner
+    position: relative
+    margin-top: -50rem
+    padding: 5rem 3rem
+    max-width: 42rem
+
+    background-color: $white
+    border: 0.1rem solid $border
+
+    &-list
+      margin-bottom: 4rem
+
+    &-item
+      position: relative
+      padding-left: 7.8rem
+
+      font-size: 1.8rem
+      line-height: 2.7rem
+      font-weight: 500
+      span
+        display: block
+        margin-top: 1rem
+
+        font-weight: 400
+        line-height: 2.6rem
+      &::before
+        content: ''
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        left: 0
+        top: 0
+        width: 6.1rem
+        height: 6.1rem
+
+        font-size: 3.5rem
+
+        background-color: $primary
+        border-radius: 50%
+        color: $white
+
+      &:first-child
+        margin-bottom: 3.6rem
+        &::before
+          content: '1'
+
+      &:nth-child(2)
+        margin-bottom: 4.5rem
+        &::before
+          content: '2'
+
+      &:last-child
+        &::before
+          content: '3'
+
+  &__photographer
+    &-item
+      position: relative
+      padding-left: 7.8rem
+
+      font-size: 1.8rem
+      line-height: 2.2rem
+      font-weight: 500
+      span
+        display: block
+
+        font-weight: 400
+        line-height: 2.4rem
+      &::before
+       content: ''      
+       position: absolute
+       left: 0
+       top: 0
+       width: 6.7rem
+       height: 6.7rem
+
+
+       border-radius: 50%
+       background: url('../images/jpg/photographer-small.jpg') no-repeat center/cover
+
+    &-link
+      font-size: 1.4rem
+      line-height: 2.1rem
+
+      color: $link
+        

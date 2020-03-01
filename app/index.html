@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f56ec71d-26f4-4916-9094-0b19d354d331&lang=ru_RU"
+        type="text/javascript"></script>
     <title>Document</title>
 </head>
 
@@ -26,6 +28,12 @@
                         </a>
 
                         <a class="header__contact" href="tel:88001231212"> <span>Телефон:</span> 8(800)-123-12-12</a>
+
+                        <a class="header__city" href="#">Москва</a>
+
+                        <a href="#" class="header__user">
+                            <img src="images/svg/user.svg" alt="Icon is User">
+                        </a>
 
                     </div>
                     <!-- /.header__inner -->
@@ -55,7 +63,8 @@
                             </div>
                             <!-- /.hero__inner-price -->
 
-                            <button class="btn btn-big btn-light hero__inner-btn">Забронировать место </button>
+                            <button class="btn btn-big btn-light hero__inner-btn" data-toggle="modal">Забронировать
+                                место </button>
 
                         </div>
                         <!-- /.hero__inner -->
@@ -80,12 +89,16 @@
                                     </div>
                                     <!-- /.photosession__inner-titel -->
 
-                                    <p class="photosession__inner-text">
-                                        Полет на вертолете это прекрасная возможность получить новые ощущения! А наш
-                                        замечательный фотограф запечатлит лучшие моменты
-                                    </p>
+
 
                                     <ul class="photosession__inner-list">
+                                        <li class="photosession__inner-item">
+                                            <p class="photosession__inner-text">
+                                                Полет на вертолете это прекрасная возможность получить новые ощущения! А
+                                                наш
+                                                замечательный фотограф запечатлит лучшие моменты
+                                            </p>
+                                        </li>
                                         <li class="photosession__inner-item">
                                             3 часа съемки
                                         </li>
@@ -102,8 +115,19 @@
 
                                 </div>
                                 <!-- /.photosession__inner-info -->
-                                <div class="photosession__inner-img">
-                                    <img src="images/jpg/photosession_bg.jpg" alt="photo of a couple in love">
+                                <div class="photosession__inner-video">
+
+                                    <div class="photosession__inner-img"
+                                        style="background-image: url(../images/jpg/photosession_bg.jpg);">
+                                        <button class="photosession__inner-btn"></button>
+                                        <div class="photosession__inner-youtube">
+                                            <iframe class="photosession__inner-player"></iframe>
+                                        </div>
+                                    </div>
+
+
+
+
                                 </div>
                                 <!-- /.photosession__inner-img -->
                             </div>
@@ -139,32 +163,77 @@
                             <ul class="photo__inner-list">
 
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-1.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-1.jpg" alt="selfie girls">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-2.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-2.jpg" alt="photo from the board">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-3.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-3.jpg" alt="photo of a couple in love">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-4.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-4.jpg" alt="photo of a girl and a helicopter">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-3.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-3.jpg" alt="photo of a couple in love">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-4.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-4.jpg" alt="photo of a girl and a helicopter">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-2.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-2.jpg" alt="photo from the board">
                                 </li>
                                 <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-3.jpg" alt="">
+                                    <img src="images/jpg/photosession_img-3.jpg" alt="photo of a couple in love">
                                 </li>
                             </ul>
 
-                            <a class="photo__inner-link" href="#">Показать все фото</a>
+
+                            <div class="photo__inner-spoiler">
+
+                                <div class="photo__inner-content">
+                                    <ul class="photo__inner-list">
+
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-1.jpg" alt="selfie girls">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-2.jpg" alt="photo from the board">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-3.jpg"
+                                                alt="photo of a couple in love">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-4.jpg"
+                                                alt="photo of a girl and a helicopter">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-3.jpg"
+                                                alt="photo of a couple in love">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-4.jpg"
+                                                alt="photo of a girl and a helicopter">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-2.jpg" alt="photo from the board">
+                                        </li>
+                                        <li class="photo__inner-item">
+                                            <img src="images/jpg/photosession_img-3.jpg"
+                                                alt="photo of a couple in love">
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- /.photo__inner-content -->
+                                <div class="photo__inner-link open-spoiler">Показать все фото</div>
+
+
+
+                            </div>
+                            <!-- /.photo__inner-spoiler -->
+
 
                         </div>
                         <!-- /.photo__inner -->
@@ -197,7 +266,13 @@
                                     и планам клиента. Мы никогда не зависим от субпоставщиков
                                     и&nbsp;не&nbsp;свяжемся…
                                 </p>
-                                <a class="info__text-link" href="">Читать еще</a>
+                                <p class="info__text-description none">
+                                    Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем
+                                    подходящее решение, которое соответствует бюджету
+                                    и планам клиента. Мы никогда не зависим от субпоставщиков
+                                    и&nbsp;не&nbsp;свяжемся…
+                                </p>
+                                <div class="info__text-link open-spoiler">Читать еще</div>
 
                                 <div class="info__text-titel">
                                     Что я предоставлю:
@@ -210,7 +285,15 @@
                                     Дубае !
                                 </p>
 
-                                <a class="info__text-link" href="">Читать еще</a>
+                                <p class="info__text-description padding none">
+                                    Встречу вас на машине после длительного перелёта. Качественный подбор места и
+                                    локации для вашей съемки. При&nbsp;необходимости всегда возможно прерваться на
+                                    обед/ужин. Более&nbsp;50 фотографий на выходе с обработкой и замечательные
+                                    впечатления о
+                                    Дубае !
+                                </p>
+
+                                <div class="info__text-link open-spoiler">Читать еще</div>
 
                             </div>
                             <!-- /.info__inner-text -->
@@ -233,15 +316,481 @@
                     </div>
                     <!-- /.container -->
                 </section>
+
+                <section class="reserve">
+
+                    <div class="container">
+
+                        <div class="reserve__titel">
+                            Доступная съемка
+                            в ближайшее время:
+                        </div>
+
+                        <div class="reserve__inner">
+
+                            <div class="reserve__inner-date">
+
+                                <div class="reserve__inner-calendar">
+                                    Пятница, 14 сентября
+                                </div>
+
+                                <button class="icon-calendar reserve__inner-btn"></button>
+
+                            </div>
+                            <!-- /.reserve__inner-date -->
+
+                            <div class="reserve__inner-record border ">
+                                <ul class="reserve__inner-list">
+                                    <li class="reserve__inner-item">
+                                        15:00 - 18:00
+                                    </li>
+                                    <li class="reserve__inner-item">
+                                        <span>1500₽</span>
+                                    </li>
+                                    <li class="reserve__inner-item">
+                                        Осталось — 1 место
+                                    </li>
+                                </ul>
+
+                                <button class="btn btn-small btn-flex">Выбрать</button>
+
+
+                            </div>
+                            <!-- /.reserve__inner-record -->
+
+                            <div class="reserve__inner-record ">
+                                <ul class="reserve__inner-list">
+                                    <li class="reserve__inner-item">
+                                        19:00 - 22:00
+                                    </li>
+                                    <li class="reserve__inner-item">
+                                        <span>1500₽</span>
+                                    </li>
+                                    <li class="reserve__inner-item">
+                                        Осталось — 1 место
+                                    </li>
+                                </ul>
+
+                                <button class="btn btn-small btn-flex">Выбрать</button>
+
+
+                            </div>
+                            <!-- /.reserve__inner-record -->
+
+                            <div class="reviews reserve__inner-reviews ">
+
+                                <p class="reviews__text">
+                                    Более <span>50</span> отзывов с оценкой
+                                </p>
+
+                                <div class="reviews__stars"></div>
+
+                            </div>
+
+                        </div>
+                        <!-- /.reserve__inner -->
+
+
+                    </div>
+                    <!-- /.container -->
+
+                </section>
+
+                <section class="map">
+                    <div id="map" class="map" style="width: auto; height: 509px"></div>
+
+                    <div class="container">
+                        <div class="map__inner">
+                            <div class="map__inner-box">
+                                <ul class="map__inner-list">
+                                    <li class="map__inner-item">
+                                        <div class="map__inner-titel">
+                                            Где встречаемся?
+                                            <span>Москва</span>
+                                        </div>
+                                    </li>
+                                    <li class="map__inner-item">
+                                        <div class="map__inner-titel">
+                                            Время съемки
+                                            <span>3 часа</span>
+                                        </div>
+                                    </li>
+                                    <li class="map__inner-item">
+                                        <div class="map__inner-titel">
+                                            Мест осталось:
+                                            <span>2 места</span>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- /.map__inner-box -->
+                            <ul class="map__inner-photographer map__photographer ">
+                                <li class="map__photographer-item">
+                                    <div class="map__photographer-titel">
+                                        Мария Иванова
+                                        <span>Фотограф</span>
+                                    </div>
+                                    <a class="map__photographer-link" href="#">Показать больше информации</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /.map__inner -->
+                    </div>
+                    <!-- /.container -->
+
+                </section>
+
+                <section class="comments">
+
+                    <div class="container">
+
+                        <div class="comments__titel">
+                            Отзывы:
+                        </div>
+                        <!-- /.comments__titel -->
+
+                        <div class="comments__inner">
+                            <ul class="comments__inner-list">
+                                <li class="comments__inner-item">
+
+                                    <div class="comments__inner-titel">
+                                        Валерия Антонова
+                                        <span>Арт-директор</span>
+                                    </div>
+                                    <!-- /.comments__inner-titel -->
+
+                                    <div class="comments__inner-appreciated">
+                                        <div class="reviews__stars"></div>
+                                        <div class="comments__inner-like">
+                                            Супер! Я бы заказала съемку снова!
+                                        </div>
+                                    </div>
+                                    <!-- /.comments__inner-appreciated -->
+
+                                    <p class="comments__inner-text">
+                                        Хотим выразить огромную благодарность вашей компании! Получили море ощущений,
+                                        все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо
+                                        фотографу!
+
+                                        <span> 27 Апреля, 2019г.</span>
+                                    </p>
+
+
+
+                                </li>
+
+                                <li class="comments__inner-item">
+
+                                    <div class="comments__inner-titel">
+                                        Виталий Петров
+                                        <span>Фотограф</span>
+                                    </div>
+                                    <!-- /.comments__inner-titel -->
+
+                                    <div class="comments__inner-appreciated">
+                                        <div class="reviews__stars"></div>
+                                        <div class="comments__inner-like">
+                                            Супер! Я бы заказала съемку снова!
+                                        </div>
+                                    </div>
+                                    <!-- /.comments__inner-appreciated -->
+
+                                    <p class="comments__inner-text">
+                                        Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                                        октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
+                                        Организация полёта отличная. Спасибо!
+
+                                        <span>19 Апреля, 2019г.</span>
+                                    </p>
+
+
+                                </li>
+
+                                <li class="comments__inner-item">
+
+                                    <div class="comments__inner-titel">
+                                        Джим Керри
+                                    </div>
+                                    <!-- /.comments__inner-titel -->
+
+                                    <div class="comments__inner-appreciated">
+                                        <div class="reviews__stars"></div>
+                                        <div class="comments__inner-like">
+                                            Супер! Я бы заказала съемку снова!
+                                        </div>
+                                    </div>
+                                    <!-- /.comments__inner-appreciated -->
+
+                                    <p class="comments__inner-text">
+                                        Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски
+                                        были вкусными и сытными))Мы
+                                        с собой ничего не брали. Сами много фоткались,поэтому воспоминания
+                                        обалденные!!!)) А еще нам всем напечатали по сертификату воздухоплавателя,
+                                        правда некоторые ленятся за ним съездить))) Но все равно приятно. Короче,
+                                        Презентстар – проверено. Оценка: пять!
+
+                                        <span>11 Апреля, 2019г.</span>
+                                    </p>
+
+                                </li>
+                            </ul>
+
+                            <div class="comments__inner-spoiler">
+
+                                <div class="comments__inner-content">
+                                    <ul class="comments__inner-list">
+                                        <li class="comments__inner-item">
+
+                                            <div class="comments__inner-titel">
+                                                Валерия Антонова
+                                                <span>Арт-директор</span>
+                                            </div>
+                                            <!-- /.comments__inner-titel -->
+
+                                            <div class="comments__inner-appreciated">
+                                                <div class="reviews__stars"></div>
+                                                <div class="comments__inner-like">
+                                                    Супер! Я бы заказала съемку снова!
+                                                </div>
+                                            </div>
+                                            <!-- /.comments__inner-appreciated -->
+
+                                            <p class="comments__inner-text">
+                                                Хотим выразить огромную благодарность вашей компании! Получили море
+                                                ощущений,
+                                                все прошло просто замечательно. Фотки получились великолепные, отдельное
+                                                спасибо
+                                                фотографу!
+
+                                                <span> 27 Апреля, 2019г.</span>
+                                            </p>
+
+
+
+                                        </li>
+
+                                        <li class="comments__inner-item">
+
+                                            <div class="comments__inner-titel">
+                                                Виталий Петров
+                                                <span>Фотограф</span>
+                                            </div>
+                                            <!-- /.comments__inner-titel -->
+
+                                            <div class="comments__inner-appreciated">
+                                                <div class="reviews__stars"></div>
+                                                <div class="comments__inner-like">
+                                                    Супер! Я бы заказала съемку снова!
+                                                </div>
+                                            </div>
+                                            <!-- /.comments__inner-appreciated -->
+
+                                            <p class="comments__inner-text">
+                                                Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                                                октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт,
+                                                приземление.
+                                                Организация полёта отличная. Спасибо!
+
+                                                <span>19 Апреля, 2019г.</span>
+                                            </p>
+
+
+                                        </li>
+
+                                        <li class="comments__inner-item">
+
+                                            <div class="comments__inner-titel">
+                                                Джим Керри
+                                            </div>
+                                            <!-- /.comments__inner-titel -->
+
+                                            <div class="comments__inner-appreciated">
+                                                <div class="reviews__stars"></div>
+                                                <div class="comments__inner-like">
+                                                    Супер! Я бы заказала съемку снова!
+                                                </div>
+                                            </div>
+                                            <!-- /.comments__inner-appreciated -->
+
+                                            <p class="comments__inner-text">
+                                                Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати
+                                                закуски
+                                                были вкусными и сытными))Мы
+                                                с собой ничего не брали. Сами много фоткались,поэтому воспоминания
+                                                обалденные!!!)) А еще нам всем напечатали по сертификату
+                                                воздухоплавателя,
+                                                правда некоторые ленятся за ним съездить))) Но все равно приятно.
+                                                Короче,
+                                                Презентстар – проверено. Оценка: пять!
+
+                                                <span>11 Апреля, 2019г.</span>
+                                            </p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.comments__inner-content -->
+
+                                <div class="comments__inner-link open-spoiler">
+                                    Показать Все <span>(134)</span>
+                                </div>
+
+                            </div>
+                            <!-- /.comments__inner-spoiler -->
+
+                        </div>
+                        <!-- /.comments__inner -->
+
+                    </div>
+                    <!-- /.container -->
+
+
+
+                </section>
+
             </main>
 
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+
+            <div class="footer__top">
+
+                <div class="container">
+
+                    <div class="footer__inner">
+                        <a href="#" class="footer__logo">
+                            <img src="images/svg/logo.svg" alt="Logotip site">
+                        </a>
+
+                        <div class="footer__top-social">
+                            <a class="link-vk" href="#"></a>
+                            <a class="link-Facebook" href="#"></a>
+                            <a class="link-Instragram" href="#"></a>
+                        </div>
+                        <div class="footer__top-language">
+                            ru
+                        </div>
+                    </div>
+                    <!-- /.footer__inner -->
+
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.footer__top -->
+
+            <div class="footer__botton">
+
+                <div class="container">
+
+                    <div class="footer__botton-inner">
+
+                        <div class="footer__botton-cards">
+                            <a class="link-mc" href="#"></a>
+                            <a class="link-visa" href="#"></a>
+
+                        </div>
+                        <!-- /.footer__botton-cards -->
+
+                        <div class="footer__botton-info">
+
+                            <a class="footer__botton-support" href="tel:88007000000">
+                                <span>Тех. поддержка:</span>
+                                8(800)700-00-00
+                            </a>
+
+                            <div class="footer__botton-copuright">
+                                <span>&copy;</span> 2018 HELYFLY. All Rights Reserved.
+                            </div>
+
+                        </div>
+                        <!-- /.footer__botton-info -->
+                    </div>
+                    <!-- /.footer__botton-info -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.footer__botton -->
+
+        </footer>
+
+
+    </div>
+
+    <div class="modal ">
+        <div class="modal__dialog">
+            <button class="modal__close"></button>
+            <div class="modal__titel">Бронирование </div>
+            <form class="form modal__form">
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-date" class="modal__input-label">Дата</label>
+                    <input type="text" name="userDate" class="input form__input modal__input" id="modal__user-date"
+                        placeholder="12.09.2019">
+                    <button class="modal__input-btn icon-calendar"></button>
+
+                </div>
+
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-email" class="modal__input-label">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input" id="modal__user-email"
+                        placeholder="Электронная почта">
+                </div>
+
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-Name" class="modal__input-label">Имя</label>
+                    <input type="text" name="userName" class="form__input modal__input" id="modal__user-Name"
+                        placeholder="Иван">
+                </div>
+
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-surname" class="modal__input-label">Фамилия</label>
+                    <input type="text" name="userSurname" class="form__input modal__input" id="modal__user-surname"
+                        placeholder="Громов:">
+                </div>
+
+
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-phone" class="modal__input-label">Телефон</label>
+                    <input type="tel" name="userPhone" class="form__input modal__input" id="modal__user-phone"
+                        placeholder="Ваш номер телефона:">
+                </div>
+
+                <div class="input-group modal__input-group">
+                    <label for="modal__user-data" class="modal__input-label">Данные карты</label>
+                    <input type="text" name="userData" class="form__input modal__input" id="modal__user-data"
+                        placeholder="Номер карты">
+                    <div class="modal__input-cards">
+                        <input type="text" name="userNumber" class="form__input modal__input" id="modal__user-number"
+                            placeholder="Срок действия">
+                        <input type="text" name="userCVV" class="form__input modal__input" id="modal__user-cvv"
+                            placeholder="CVV">
+                    </div>
+
+                </div>
+
+
+                <div class="policy modal__policy">
+                    <input type="checkbox" name="policy-checkbox" class="policy__checkbox " id="modal__policy-checkbox"
+                        checked>
+                    <label for="modal__policy-checkbox" class="policy__label">
+                        Я согласен с пользовательским
+                        соглашением и публичной офертой
+                    </label>
+                </div>
+
+                <button class="btn modal__button">Забронировать</button>
+
+            </form>
+
+        </div>
+        <!-- /.modal-dialog -->
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
