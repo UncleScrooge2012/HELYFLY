@@ -43,17 +43,17 @@
         border-radius: 50%
         color: $white
 
-      &:first-child
+      &--one
         margin-bottom: 3.6rem
         &::before
           content: '1'
 
-      &:nth-child(2)
+      &--two
         margin-bottom: 4.5rem
         &::before
           content: '2'
 
-      &:last-child
+      &--three
         &::before
           content: '3'
 
@@ -87,4 +87,37 @@
       line-height: 2.1rem
 
       color: $link
-        
+
+
+// slider
+
+// .owl-dots
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+// .owl-dot
+//   width: 1.5rem
+//   height: 1.5rem
+//   border-radius: 50%   
+//   border: 0.5px solid $border !important
+  
+//   &.active
+//     background-color: $primary !important
+  
+//   & + .owl-dot
+//     margin-left: 1rem
+
+@media screen and ( max-width:760px )
+
+  .map__inner 
+    
+    margin: 0 auto
+    margin-top: 3rem
+    &-item
+      padding-left: 0
+      padding-top: 7.8rem
+      margin-bottom: 2rem
+      text-align: center
+      &::before
+        left: 40%

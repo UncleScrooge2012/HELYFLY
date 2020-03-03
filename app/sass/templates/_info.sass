@@ -35,50 +35,47 @@
 
         color: $primary
 
+  &__text
+    &-description
+      max-width: 58.4rem
+
+      line-height: 2.4rem
+      &.padding
+        padding-right: 2rem
+      &.none
+        display: none
+
+    &-link
+      position: relative   
+      max-width: 12rem
+      margin-bottom: 4rem
+      padding-right: 2.1rem
+      line-height: 2.3rem
+      font-weight: 500
       
-
-.info__text
-  &-description
-    max-width: 58.4rem
-
-    line-height: 2.4rem
-    &.padding
-      padding-right: 2rem
-    &.none
-      display: none
-
-  &-link
-    position: relative   
-    max-width: 12rem
-    margin-bottom: 4rem
-    padding-right: 2.1rem
-    line-height: 2.3rem
-    font-weight: 500
-    
-    color: $link    
-    
-
-    &::after
-      content: '\f107'
-      position: absolute
-      right: 0
-
-      font-family: 'icomoon'
-      font-size: 1.6rem
-    
-      color: $border
-      transition: all 0.5s 
-
-    &.active
+      color: $link    
+      
+  
       &::after
-        transform: rotate(180deg)
-
-
-
-  &-titel
-    font-size: 1.8rem
-    line-height: 2.6rem
-    font-weight: 500
+        content: '\f107'
+        position: absolute
+        right: 0
+  
+        font-family: 'icomoon'
+        font-size: 1.6rem
+      
+        color: $border
+        transition: all 0.5s 
+  
+      &.active
+        &::after
+          transform: rotate(180deg)
+  
+  
+    &-titel
+      font-size: 1.8rem
+      line-height: 2.6rem
+      font-weight: 500
 
 
 .info__photographer
@@ -88,6 +85,11 @@
     margin-bottom: 2.3rem
 
     border-radius: 50%
+   
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
   
   &-titel
     max-width: 16.3rem   
@@ -110,4 +112,24 @@
       display: block
 
 
-    
+@media screen and ( max-width:975px )
+  .info
+    &__titel
+      text-align: center
+    &__text
+      &-link
+        margin: 0 auto
+        margin-bottom: 2rem
+
+    &__inner
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      &-text
+        text-align: center
+
+@media screen and ( max-width:600px  )
+  .info
+    &__photographer
+      &-img
+        margin-bottom: 3rem  

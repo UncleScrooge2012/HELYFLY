@@ -101,10 +101,100 @@ $(function () {
 
   $('.photosession__inner-btn').click(function() {
     this.style.display = 'none';
-    $('.photosession__inner-youtube').css('display', 'block');
+    $('.photosession__inner-player').css('display', 'block');
     $('.photosession__inner-player').prop('src', 'https://www.youtube.com/embed/CBnF2yVqSmI');
   });
 
+
+  function postsCarousel() {
+    let checkWidth = $(window).width();
+    let sliderOne = $(".photo__inner-list");
+    if (checkWidth > 1200) {
+        if(typeof sliderOne.data('owl.carousel') != 'undefined'){
+            sliderOne.data('owl.carousel').destroy(); 
+        }
+        sliderOne.removeClass('owl-carousel');
+    } else if (checkWidth < 1132) {
+        sliderOne.addClass('owl-carousel');
+        sliderOne.owlCarousel({
+            loop:true,
+            margin:10,
+            nav: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1199:{
+                    items:4
+                }
+            }
+        });
+    }
+}
+
+
+postsCarousel();
+$(window).resize(postsCarousel);
+
+function postsCarousel2() {
+  let checkWidth = $(window).width();
+  let sliderThree = $(".spoiler__list");
+  if (checkWidth > 1200) {
+      if(typeof sliderThree.data('owl.carousel') != 'undefined'){
+          sliderThree.data('owl.carousel').destroy(); 
+      }
+      sliderThree.removeClass('owl-carousel');
+  } else if (checkWidth < 1132) {
+      sliderThree.addClass('owl-carousel');
+      sliderThree.owlCarousel({
+          loop:true,
+          margin:10,
+          nav: false,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1199:{
+                  items:4
+              }
+          }
+      });
+  }
+}
+
+
+postsCarousel2();
+$(window).resize(postsCarousel2);
+
+function postsSlider() {
+  let checkWidth = $(window).width();
+  let sliderTwo = $(".map__inner-list");
+  if (checkWidth > 760) {
+      if(typeof sliderTwo.data('owl.carousel') != 'undefined'){
+          sliderTwo.data('owl.carousel').destroy(); 
+      }
+      sliderTwo.removeClass('owl-carousel');
+  } else if (checkWidth < 760) {
+      sliderTwo.addClass('owl-carousel');
+      sliderTwo.owlCarousel({
+          loop:true,              
+          items: 1,          
+          nav: false,         
+        
+      });
+  }
+}
+
+
+postsSlider();
+$(window).resize(postsSlider);
+  
 });
 
 

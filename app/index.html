@@ -31,7 +31,7 @@
 
                         <a class="header__city" href="#">Москва</a>
 
-                        <a href="#" class="header__user">
+                        <a class="header__user"  href="#" >
                             <img src="images/svg/user.svg" alt="Icon is User">
                         </a>
 
@@ -79,17 +79,15 @@
 
                         <div class="photosession__inner">
 
+                            <div class="photosession__inner-titel">
+                                Фотосессия
+                                в вертолете
+                            </div>
+                            <!-- /.photosession__inner-titel -->
+
                             <div class="photosession__inner-row">
 
                                 <div class="photosession__inner-info">
-
-                                    <div class="photosession__inner-titel">
-                                        Фотосессия
-                                        в вертолете
-                                    </div>
-                                    <!-- /.photosession__inner-titel -->
-
-
 
                                     <ul class="photosession__inner-list">
                                         <li class="photosession__inner-item">
@@ -117,12 +115,12 @@
                                 <!-- /.photosession__inner-info -->
                                 <div class="photosession__inner-video">
 
-                                    <div class="photosession__inner-img"
-                                        style="background-image: url(../images/jpg/photosession_bg.jpg);">
+                                    <div class="photosession__inner-img"  >
                                         <button class="photosession__inner-btn"></button>
-                                        <div class="photosession__inner-youtube">
-                                            <iframe class="photosession__inner-player"></iframe>
-                                        </div>
+                                        <img src="images/jpg/photosession_bg.jpg" alt="photo of a couple in love">                                        
+                                        
+                                        <iframe class="photosession__inner-player"></iframe>
+                                        
                                     </div>
 
 
@@ -133,7 +131,7 @@
                             </div>
                             <!-- /.photosession__inner-row -->
 
-                            <div class="reviews reviews-border ">
+                            <div class="reviews reviews-border photosession__reviews ">
 
                                 <p class="reviews__text">
                                     Более <span>50</span> отзывов с оценкой
@@ -160,10 +158,12 @@
                         <!-- /.photo__titel -->
                         <div class="photo__inner">
 
-                            <ul class="photo__inner-list">
+                            <ul class="photo__inner-list owl-carousel  ">
 
-                                <li class="photo__inner-item">
-                                    <img src="images/jpg/photosession_img-1.jpg" alt="selfie girls">
+                                <li class="photo__inner-item ">
+                                    <div class=""> <img src="images/jpg/photosession_img-1.jpg" alt="selfie girls">
+                                    </div>
+
                                 </li>
                                 <li class="photo__inner-item">
                                     <img src="images/jpg/photosession_img-2.jpg" alt="photo from the board">
@@ -188,11 +188,10 @@
                                 </li>
                             </ul>
 
-
                             <div class="photo__inner-spoiler">
 
                                 <div class="photo__inner-content">
-                                    <ul class="photo__inner-list">
+                                    <ul class="photo__inner-list spoiler__list owl-carousel">
 
                                         <li class="photo__inner-item">
                                             <img src="images/jpg/photosession_img-1.jpg" alt="selfie girls">
@@ -228,8 +227,6 @@
                                 </div>
                                 <!-- /.photo__inner-content -->
                                 <div class="photo__inner-link open-spoiler">Показать все фото</div>
-
-
 
                             </div>
                             <!-- /.photo__inner-spoiler -->
@@ -400,22 +397,22 @@
                     <div id="map" class="map" style="width: auto; height: 509px"></div>
 
                     <div class="container">
-                        <div class="map__inner">
+                        <div class="map__inner ">
                             <div class="map__inner-box">
-                                <ul class="map__inner-list">
-                                    <li class="map__inner-item">
+                                <ul class="map__inner-list owl-carousel">
+                                    <li class="map__inner-item map__inner-item--one">
                                         <div class="map__inner-titel">
                                             Где встречаемся?
                                             <span>Москва</span>
                                         </div>
                                     </li>
-                                    <li class="map__inner-item">
+                                    <li class="map__inner-item map__inner-item--two">
                                         <div class="map__inner-titel">
                                             Время съемки
                                             <span>3 часа</span>
                                         </div>
                                     </li>
-                                    <li class="map__inner-item">
+                                    <li class="map__inner-item map__inner-item--three">
                                         <div class="map__inner-titel">
                                             Мест осталось:
                                             <span>2 места</span>
@@ -462,7 +459,7 @@
                                     <!-- /.comments__inner-titel -->
 
                                     <div class="comments__inner-appreciated">
-                                        <div class="reviews__stars"></div>
+                                        <div class="reviews__stars reviews__stars--margin  comments__inner-reviews"></div>
                                         <div class="comments__inner-like">
                                             Супер! Я бы заказала съемку снова!
                                         </div>
@@ -490,7 +487,7 @@
                                     <!-- /.comments__inner-titel -->
 
                                     <div class="comments__inner-appreciated">
-                                        <div class="reviews__stars"></div>
+                                        <div class="reviews__stars reviews__stars--margin  comments__inner-reviews"></div>
                                         <div class="comments__inner-like">
                                             Супер! Я бы заказала съемку снова!
                                         </div>
@@ -516,7 +513,7 @@
                                     <!-- /.comments__inner-titel -->
 
                                     <div class="comments__inner-appreciated">
-                                        <div class="reviews__stars"></div>
+                                        <div class="reviews__stars reviews__stars--margin  comments__inner-reviews"></div>
                                         <div class="comments__inner-like">
                                             Супер! Я бы заказала съемку снова!
                                         </div>
@@ -550,7 +547,7 @@
                                             <!-- /.comments__inner-titel -->
 
                                             <div class="comments__inner-appreciated">
-                                                <div class="reviews__stars"></div>
+                                                <div class="reviews__stars reviews__stars--margin  comments__inner-reviews"></div>
                                                 <div class="comments__inner-like">
                                                     Супер! Я бы заказала съемку снова!
                                                 </div>
@@ -580,7 +577,7 @@
                                             <!-- /.comments__inner-titel -->
 
                                             <div class="comments__inner-appreciated">
-                                                <div class="reviews__stars"></div>
+                                                <div class="reviews__stars reviews__stars--margin comments__inner-reviews"></div>
                                                 <div class="comments__inner-like">
                                                     Супер! Я бы заказала съемку снова!
                                                 </div>
@@ -607,7 +604,7 @@
                                             <!-- /.comments__inner-titel -->
 
                                             <div class="comments__inner-appreciated">
-                                                <div class="reviews__stars"></div>
+                                                <div class="reviews__stars reviews__stars--margin"></div>
                                                 <div class="comments__inner-like">
                                                     Супер! Я бы заказала съемку снова!
                                                 </div>

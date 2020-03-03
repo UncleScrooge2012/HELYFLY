@@ -56,7 +56,7 @@
     &-info
       display: flex
       flex-direction: column
-      align-items: center
+      align-items: center      
       flex-grow: 1
 
       font-size: 1.4rem
@@ -96,3 +96,27 @@
     width: 39px
     height: 25px
     background-position: -39px 0
+
+
+@media screen and ( max-width:625px  )
+
+  .footer
+    &__inner
+      min-height: 15rem
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+
+    &__top
+
+      &-social
+        margin: 0
+
+    &__botton
+      &-inner
+        min-height: 10rem
+        flex-direction: column
+        align-items: center
+        justify-content: space-arounds
+
+  

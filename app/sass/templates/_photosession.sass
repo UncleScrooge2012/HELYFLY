@@ -20,7 +20,7 @@
     &-text
       max-width: 54.9rem
       margin-top: 0
-      margin-bottom: 1.8rem
+      margin-bottom: 5rem
 
       font-size: 1.8rem
       line-height: 2.6rem 
@@ -44,7 +44,7 @@
         margin-bottom: 3rem
 
       &:nth-child(2)
-        margin-bottom: 3.3rem
+        margin-bottom: 5.3rem
         padding-left: 5.1rem
         &::before
           width: 4rem
@@ -53,7 +53,7 @@
           background-image: url('../images/svg/icon-clock.svg') 
 
       &:nth-child(3)
-        margin-bottom: 2.6rem
+        margin-bottom: 4.6rem
         &::before
           width: 3.5rem
           height: 2.8rem
@@ -61,7 +61,7 @@
           background-image: url('../images/svg/icon-camera.svg') 
 
       &:nth-child(4)
-        margin-bottom: 2.6rem
+        margin-bottom: 5.6rem
         &::before
           width: 3.3rem
           height: 3.3rem
@@ -79,10 +79,14 @@
      
 
     &-video
-      width: 55.4rem
-      height: 37.4rem
-    &-img
-      height: 100%
+      flex-basis: 48%
+     
+      img
+        object-fit: cover
+        width: 100%
+        height: 100%
+      
+    &-img     
       position: relative
 
     &-btn
@@ -99,14 +103,49 @@
       outline: none
       
 
-    &-youtube
-      display: none
+    &-player     
+      position: absolute
+      display: none     
+      top: 0 
+      width: 100%
+      height: 100%
 
-    &-player
-      width: 55.4rem
-      height: 37.4rem
+   
 
-          
+@media screen and ( max-width:1132px ) 
+  
+  .photosession
+
+    &__inner
+
+      &-titel
+        margin: 0 auto
+        margin-bottom: 2rem
+
+      &-row
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+
+      &-video        
+        order: -1
+        margin-bottom: 2rem
+        flex-basis: 98%
+        
+        
+        
+        
+
+    &__reviews
+      margin: 0 auto
+
+  
+  
 
 
 
+ 
+
+
+  

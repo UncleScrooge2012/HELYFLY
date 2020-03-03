@@ -22,21 +22,21 @@
     max-width: 61.5rem
 
     background-color: $white
-    padding: 5.5rem 10.5rem 5.5rem 9rem
+    padding: 3rem 10.5rem 3rem 9rem
 
   &__close
     position: absolute
     right: 0
     top: 0
-    width: 2rem
-    height: 2rem
+    width: 20px
+    height: 20px
     background: transparent url('../images/svg/close.svg') no-repeat
     border: none
     margin: 1.2rem
     cursor: pointer
 
   &__titel
-    margin-bottom: 3rem
+   
 
     font-size: 2.2rem
     font-weight: 600
@@ -48,7 +48,7 @@
       flex-direction: column
 
   &__input
-    padding: 1.3rem 0 1.1rem
+    padding: 1rem 0 1rem
     padding-left: 2rem
     line-height: 2rem
     &-group
@@ -57,11 +57,14 @@
       flex-direction: column
       margin-bottom: 1rem
     &-cards
-      min-width: 42rem
+      width: 100&
       display: flex
+     
       input
-        border-top: none              
-        min-width: 20.5rem
+        border-top: none  
+        width: 50%
+                    
+        
     &-btn
       align-self: center
       padding: 1.7rem 1rem 1.8rem
@@ -93,7 +96,7 @@
 
   &__button
     align-self: center
-    padding: 2.6rem 12.8rem 2.4rem 12.9rem
+    padding: 2.2rem 12.8rem 2.2rem 12.9rem
 
     font-weight: 600
     line-height: 2rem
@@ -101,6 +104,14 @@
     color: $white
     background-color: $primary
     border-radius: 3px
+    border: 0.3rem solid $primary
+    &:hover
+      border: 0.3rem solid $primary
+      background-color: transparent
+      color: $primary
+
+      
+
 
 
 .policy
@@ -116,6 +127,7 @@
     display: flex
     align-items: center
     font-size: 1.6rem
+    line-height: 2rem
     &::before
        content: ''       
        width: 2.4rem
@@ -126,4 +138,27 @@
        margin-right: 0.8rem
    
 
-       
+@media screen and ( max-width:650px  )
+
+  .modal
+    &__dialog
+      max-width: 45rem
+      padding: 3.5rem 6.5rem 3.5rem 6rem
+
+    &__input
+      &-cards        
+        flex-direction: column
+        input
+          width: 100%
+
+@media screen and ( max-width:370px  )
+  .modal
+    &__dialog
+      max-width: 32rem
+      padding: 3.5rem 1rem 3.5rem 1rem
+
+    &__button
+      padding: 2rem 8rem 2rem 8rem  
+.policy
+  &__label
+    font-size: 1.4rem
