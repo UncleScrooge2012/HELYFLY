@@ -18,7 +18,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "jquery-mask-plugin": "^1.14.16",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.4",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
